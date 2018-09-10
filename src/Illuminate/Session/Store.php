@@ -84,7 +84,7 @@ class Store implements Session
      */
     protected function loadSession()
     {
-        $this->attributes = array_merge($this->attributes, $this->readFromHandler());
+        $this->attributes = $this->attributes + $this->readFromHandler();
     }
 
     /**
